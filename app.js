@@ -151,18 +151,11 @@ inputField.addEventListener('keypress', event => {
 sliderBtn.addEventListener('click', function () {
   const duration = document.getElementById('duration').value;
   console.log(duration);
-  // if (duration <= 0) {
-  //   alert("Warning! \nPlease enter some positive value");
-  // } 
-  if (duration == -0){
-  alert("Warning! \nPlease enter some positive value");
-}
-else if (duration < 0){
-  alert("Warning! \nPlease enter some positive value");
-}
-  else {
-  createSlider();
-}
+  if (duration < 0) {
+    alert("Warning! \nPlease enter some positive value");
+  } else {
+    createSlider();
+  }
 });
 
 // display none and block
