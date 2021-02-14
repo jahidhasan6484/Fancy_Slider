@@ -149,10 +149,15 @@ inputField.addEventListener('keypress', event => {
 
 // Create Slider
 sliderBtn.addEventListener('click', function () {
-  let duration = document.getElementById('duration').value;
-  if (duration <= -0 ) {
-    alert("Warning! \nPlease enter some positive value")
-  } else {
+  const duration = document.getElementById('duration').value;
+  console.log(duration);
+  if (duration < 0 || duration == -0) {
+    alert("Warning! \nPlease enter some positive value");
+   } 
+   //else if (duration == -0){
+  //   alert("Warning! \nPlease enter some positive value");
+  // }
+  else{
     createSlider();
   }
 });
