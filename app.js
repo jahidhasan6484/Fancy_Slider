@@ -68,7 +68,7 @@ const createSlider = () => {
     return;
   }
 
-  // crate slider previous-next
+  // crate slider previous next area
   sliderContainer.innerHTML = '';
   const prevNext = document.createElement('div');
   prevNext.className = "prev-next d-flex w-100 justify-content-between align-items-center";
@@ -80,7 +80,7 @@ const createSlider = () => {
   sliderContainer.appendChild(prevNext)
   document.querySelector('.main').style.display = 'block';
 
-  // hide image
+  // hide image area
   imagesArea.style.display = 'none';
   let duration = document.getElementById('duration').value || 1000;
   sliders.forEach(slide => {
