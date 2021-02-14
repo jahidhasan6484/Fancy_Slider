@@ -44,6 +44,7 @@ let slideIndex = 0;
 const selectItem = (event, img) => {
   let element = event.target;
   element.classList.toggle('added');
+  // extra work 2
   let imageCount = 0;
   const imageCountText = document.getElementById('image-count');
 
@@ -123,6 +124,7 @@ const changeSlide = (index) => {
 };
 
 searchBtn.addEventListener('click', function () {
+  // extra work 1
   const searchInput = document.getElementById("search").value;
   if (searchInput == "") {
     alert("Please enter some valid keyword to search");
@@ -138,8 +140,8 @@ searchBtn.addEventListener('click', function () {
 
 // Enter key to search image
 const inputField = document.getElementById('search');
-inputField.addEventListener('keypress', e => {
-  if (e.key === 'Enter') {
+inputField.addEventListener('keypress', event => {
+  if (event.key === 'Enter') {
     searchBtn.click();
   }
 });
