@@ -139,7 +139,7 @@ searchBtn.addEventListener('click', function () {
   }
 });
 
-// Enter key to search image
+// enter key to search image
 const inputField = document.getElementById('search');
 inputField.addEventListener('keypress', event => {
   if (event.key === 'Enter') {
@@ -147,22 +147,25 @@ inputField.addEventListener('keypress', event => {
   }
 });
 
-// Create Slider
+//get duration and create slider
 sliderBtn.addEventListener('click', function () {
   const duration = document.getElementById('duration').value;
   console.log(duration);
-  if (duration < 0 || duration == -0) {
-    alert("Warning! \nPlease enter some positive value");
-   } 
-   //else if (duration == -0){
+  // if (duration <= 0) {
   //   alert("Warning! \nPlease enter some positive value");
-  // }
-  else{
-    createSlider();
-  }
+  // } 
+  if (duration == -0){
+  alert("Warning! \nPlease enter some positive value");
+}
+else if (duration < 0){
+  alert("Warning! \nPlease enter some positive value");
+}
+  else {
+  createSlider();
+}
 });
 
-// Display none and block
+// display none and block
 const showSpinner = () => {
   document.getElementById('spinner').classList.toggle('d-none');
   document.querySelector('.gallery').classList.toggle('d-none');
