@@ -135,6 +135,7 @@ searchBtn.addEventListener('click', function () {
     const search = document.getElementById('search');
     getImages(search.value)
     sliders.length = 0;
+    document.getElementById("search").value = "";
   }
 });
 
@@ -149,8 +150,8 @@ inputField.addEventListener('keypress', event => {
 // Create Slider
 sliderBtn.addEventListener('click', function () {
   let duration = document.getElementById('duration').value;
-  if (duration < 0) {
-    alert("Warning! \nSlide duration time can't be a negative value")
+  if (duration <= -0 ) {
+    alert("Warning! \nPlease enter some positive value")
   } else {
     createSlider();
   }
